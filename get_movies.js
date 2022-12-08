@@ -14,12 +14,14 @@ const removeMoviesFromDom = function () {
 }
 
 const addMoviesToDom = function (movieArray) {
-    let posterLinks = movieArray.map((info) => { return info.poster })
-    let movieList = document.getElementById('movieWall').getElementsByTagName('ul')[0]
+    movieArray.forEach((film) => {
+        let movieList = document.getElementById('movieWall').getElementsByTagName('ul')[0]
+        let webLink = film.imdbID
+        let posterLink = film.poster
 
-    posterLinks.forEach((poster) => {
-        const addMovie = document.createElement('img')
-        addMovie.src = poster
+        const addMovie = document.createElement('a')
+        addMovie.href = 'https://www.imdb.com/title/' + webLink + '/';
+        addMovie.innerHTML = '<img src="' + posterLink + '">';
         movieList.appendChild(addMovie)
     })
 }
