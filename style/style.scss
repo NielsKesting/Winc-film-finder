@@ -1,0 +1,26 @@
+body {
+    color: white;
+    background-color: black;
+    display: grid;
+}
+
+h1 {
+    text-align: center;
+}
+
+filter-buttons {
+    text-align: center;
+}
+
+.movieFlexBox {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+
+    img:hover {
+        width: 310px;
+    }
+
+}

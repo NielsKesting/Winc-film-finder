@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Film finder</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="movie_database.js"></script>
+    <script defer src="get_movies.js"></script>
+</head>
+
+<body>
+    <h1>Winc film finder</h1>
+
+    <filter-buttons id="filterButtons">
+        <input type="radio" id="allMovies" name="filterButton" value="allMovies">
+        <label for="allMovies">All</label>
+        <input type="radio" id="newMovies" name="filterButton" value="newMovies">
+        <label for="newMovies">New movies</label>
+        <input type="radio" id="avengers" name="filterButton" value="avengers">
+        <label for="avengers">Avengers</label>
+        <input type="radio" id="xMen" name="filterButton" value="xMen">
+        <label for="xMen">X-men</label>
+        <input type="radio" id="princess" name="filterButton" value="princess">
+        <label for="princess">Princess</label>
+        <input type="radio" id="batman" name="filterButton" value="batman">
+        <label for="batman">Batman</label>
+    </filter-buttons>
+
+    <movie-wall id="movieWall">
+        <ul class="movieFlexBox">
+        </ul>
+    </movie-wall>
+</body>
